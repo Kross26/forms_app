@@ -1,15 +1,14 @@
 part of 'counter_bloc.dart';
 
 // define todos los eventos que va a esperar el bloc para trabajar
-sealed class CounterEvent extends Equatable {
+abstract class CounterEvent {
   const CounterEvent();
-
-  @override
-  List<Object> get props => [];
 }
 
 // evento CounterIncreased que aumenta el value
 class CounterIncreased extends CounterEvent {
-  final int valueIncreased;
-  const CounterIncreased({required this.valueIncreased});
+  final int value;
+  const CounterIncreased(this.value);
 }
+
+class CounterReset extends CounterEvent {}
