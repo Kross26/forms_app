@@ -39,8 +39,9 @@ class _RegisterView extends StatelessWidget {
 }
 
 class _RegisterForm extends StatelessWidget {
-  const _RegisterForm({super.key});
+  const _RegisterForm();
 
+// formulario con validadores
   @override
   Widget build(BuildContext context) {
     return Form(
